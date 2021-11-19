@@ -31,6 +31,7 @@
     "run-parallel-limit": "^1.1.0",
     "run-series": "^1.1.9",
     "simple-get": "^4.0.0",
+    "tap-github-actions": "0.2.3",
     "tape": "^5.3.1"
   },
   "engines": {
@@ -72,6 +73,7 @@
     "test": "npm run test-internal && npm run test-external",
     "test-internal": "./bin/cmd.js --verbose && tape test/*.js",
     "test-external": "tape test/external/*.js",
+    "test-external-ci": "tape test/external/*.js | tap-github-actions",
     "update-authors": "./tools/update-authors.sh && hallmark --fix AUTHORS.md"
   },
   "funding": [
